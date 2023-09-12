@@ -1,0 +1,21 @@
+import time
+
+def typing_test():
+    prompt_text = "The environment is our soulmate and we need to take care of her."
+    print("Type the following sentence as fast as you can:")
+    print(prompt_text)
+    input("Press Enter to start...")
+    
+    start_time = time.time()
+    user_input = input()
+    end_time = time.time()
+    
+    elapsed_time = end_time - start_time
+    words_per_minute = len(prompt_text.split()) / (elapsed_time / 60)
+    
+    print("\nYou typed: ", user_input)
+    print("Time taken: {:.2f} seconds".format(elapsed_time))
+    print("Words per minute: {:.2f}".format(words_per_minute))
+
+if __name__ == "__main__":
+    typing_test()
